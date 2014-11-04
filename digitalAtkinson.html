@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Atkinson</title>
+	<font color = "black">
+
+	<style>
+
+		table{
+			border-collapse: collapse;
+		}
+
+		table, td, th{
+			border: 2px solid black;
+		}
+		table{
+			table-layout: fixed;
+		}
+		td{
+			width: 33%;
+		}
+		
+	</style>
+</head>
+<body bgcolor = "white">
+<h1>Digital Atkinson</h1>
+
+<p>Note: In order for this site to work properly you must have javascript enabled on your browser.</p>
+
+<h3>Major Selection</h3>
+
+	Please select the major for which you would like to create a schedule:
+
+	<br>
+
+	<input type="radio" id="majorCoen" name="major" value="coen" onclick="show()">
+	Computer Science and Engineering
+
+	<br>
+
+	<input type="radio" id="majorWeb" name="major" value="web" onclick="sho">
+	Web Design and Engineering
+
+<br>
+<br>
+
+<h3>Engineering I</h3>
+
+	Unless you are confident in your choice of engineering major please check the box below to schedule<br>
+	Engineering I in the Fall.
+
+	<br>
+	<input type="checkbox" id="ENGR1">
+	Take ENGR I in the Fall
+
+<br>
+<br>
+
+<h3>Student Designation</h3>
+
+	Please check if either or both of the following designations applies to you:
+
+	<br>
+
+	<input type="checkbox" id="studentDesignationH" value="honors">
+	Honors
+
+	<br>
+
+	<input type="checkbox" id="studentDesignationL" value="lead">
+	LEAD
+
+<br>
+<br>
+
+<h3>Computing Competency Exam</h3>
+
+	If you have demonstrated profeciency to the Computer Engineering Department and have<br>
+	received credit for COEN 10 and/or COEN 11 please indicate below:
+
+	<br>
+
+	<input type="checkbox" id="coen10competency" onclick="coen10competencyCheck()">
+	COEN 10
+
+	<br>
+
+	<input type="checkbox" id="coen11competency" onclick="coen11competencyCheck()">
+	COEN 11
+
+<br>
+<br>
+
+<h3>Calculus Readiness Exam</h3>
+
+	If you have taken the calculus readiness exam and do not feel comfortable starting<br>
+	the calculus sequence (MATH 11), check below to schedule precalculus (MATH 9) instead.<br>
+	If you select this option please do not enter a score for the calculus AP tests even if you have taken them:
+
+	<br>
+
+	<input type="checkbox" id="calcReadinessCheck" name="calcReadiness">
+	Schedule MATH 9 before MATH 11
+
+<br>
+<br>
+
+<h3>AP Test Scores</h3>
+
+Please indicate the score you have received on any of the following AP tests.
+
+<br>
+<br>
+
+Art History:
+<input type="radio" id="artHistoryScoreNA" name="artHistory" value=0>N/A
+<input type="radio" id="artHistoryScore1" name="artHistory" value=1>1
+<input type="radio" id="artHistoryScore2" name="artHistory" value=2>2
+<input type="radio" id="artHistoryScore3" name="artHistory" value=3>3
+<input type="radio" id="artHistoryScore4" name="artHistory" value=4>4
+<input type="radio" id="artHistoryScore5" name="artHistory" value=5>5
+<br>
+<!Biology:>
+Calculus AB:
+<input type="radio" id="calcABNA" name="calcAB" value=0 onclick="calcABNAcheck()">N/A
+<input type="radio" id="calcAB1" name="calcAB" value=1 onclick="calcAB1check()">1
+<input type="radio" id="calcAB2" name="calcAB" value=2 onclick="calcAB2check()">2
+<input type="radio" id="calcAB3" name="calcAB" value=3 onclick="calcAB3check()">3
+<input type="radio" id="calcAB4" name="calcAB" value=4 onclick="calcAB4check()">4
+<input type="radio" id="calcAB5" name="calcAB" value=5 onclick="calcAB5check()">5
+<br>
+Calculus BC:
+<input type="radio" id="calcBCNA" name="calcBC" value=0 onclick="calcBCNAcheck()">N/A
+<input type="radio" id="calcBC1" name="calcBC" value=1 onclick="calcBC1check()">1
+<input type="radio" id="calcBC2" name="calcBC" value=2 onclick="calcBC2check()">2
+<input type="radio" id="calcBC3" name="calcBC" value=3 onclick="calcBC3check()">3
+<input type="radio" id="calcBC4" name="calcBC" value=4 onclick="calcBC4check()">4
+<input type="radio" id="calcBC5" name="calcBC" value=5 onclick="calcBC5check()">5
+<br>
+Chemistry:
+<input type="radio" id="chemistryNA" name="chemistry" value=0 onclick="chemistryNAcheck()">N/A
+<input type="radio" id="chemistry1" name="chemistry" value=1 onclick="chemistry1check()">1
+<input type="radio" id="chemistry2" name="chemistry" value=1 onclick="chemistry2check()">2
+<input type="radio" id="chemistry3" name="chemistry" value=3 onclick="chemistry3check()">3
+<input type="radio" id="chemistry4" name="chemistry" value=4 onclick="chemistry4check()">4
+<input type="radio" id="chemistry5" name="chemistry" value=5 onclick="chemistry5check()">5
+<br>
+Chinese Language &amp Culture:
+<input type="radio" id="chineseNA" name="chinese" value=0>N/A
+<input type="radio" id="chinese1" name="chinese" value=1>1
+<input type="radio" id="chinese2" name="chinese" value=2>2
+<input type="radio" id="chinese3" name="chinese" value=3>3
+<input type="radio" id="chinese4" name="chinese" value=4>4
+<input type="radio" id="chinese5" name="chinese" value=5>5
+<br>
+Comparative Government &amp Politics:
+<input type="radio" id="compGovPoliticsNA" name="compGovPolitics" value=0>N/A
+<input type="radio" id="compGovPolitics1" name="compGovPolitics" value=1>1
+<input type="radio" id="compGovPolitics2" name="compGovPolitics" value=2>2
+<input type="radio" id="compGovPolitics3" name="compGovPolitics" value=3>3
+<input type="radio" id="compGovPolitics4" name="compGovPolitics" value=4>4
+<input type="radio" id="compGovPolitics5" name="compGovPolitics" value=5>5
+<br>
+Computer Science A:
+<input type="radio" id="compSciANA" name="compSciA" value=0 onclick="compSciANAcheck()">N/A
+<input type="radio" id="compSciA1" name="compSciA" value=1 onclick="compSciA1check()">1
+<input type="radio" id="compSciA2" name="compSciA" value=2 onclick="compSciA2check()">2
+<input type="radio" id="compSciA3" name="compSciA" value=3 onclick="compSciA3check()">3
+<input type="radio" id="compSciA4" name="compSciA" value=4 onclick="compSciA4check()">4
+<input type="radio" id="compSciA5" name="compSciA" value=5 onclick="compSciA5check()">5
+<br>
+<!English Language:>
+<!English Literature:>
+Environmental Science:
+<input type="radio" id="enviSciNA" name="enviSci" value=0>N/A
+<input type="radio" id="enviSci1" name="enviSci" value=1>1
+<input type="radio" id="enviSci2" name="enviSci" value=2>2
+<input type="radio" id="enviSci3" name="enviSci" value=3>3
+<input type="radio" id="enviSci4" name="enviSci" value=4>4
+<input type="radio" id="enviSci5" name="enviSci" value=5>5
+<br>
+European History:
+<input type="radio" id="europeHistoryNA" name="europeHistory" value=0>N/A
+<input type="radio" id="europeHistory1" name="europeHistory" value=1>1
+<input type="radio" id="europeHistory2" name="europeHistory" value=2>2
+<input type="radio" id="europeHistory3" name="europeHistory" value=3>3
+<input type="radio" id="europeHistory4" name="europeHistory" value=4>4
+<input type="radio" id="europeHistory5" name="europeHistory" value=5>5
+<br>
+French Language:
+<input type="radio" id="frenchNA" name="french" value=0>N/A
+<input type="radio" id="french1" name="french" value=1>1
+<input type="radio" id="french2" name="french" value=2>2
+<input type="radio" id="french3" name="french" value=3>3
+<input type="radio" id="french4" name="french" value=4>4
+<input type="radio" id="french5" name="french" value=5>5
+<br>
+German Language:
+<input type="radio" id="germanNA" name="german" value=0>N/A
+<input type="radio" id="german1" name="german" value=1>1
+<input type="radio" id="german2" name="german" value=2>2
+<input type="radio" id="german3" name="german" value=3>3
+<input type="radio" id="german4" name="german" value=4>4
+<input type="radio" id="german5" name="german" value=5>5
+<br>
+Human Geography:
+<input type="radio" id="humanGeographyNA" name="humanGeography" value=0>N/A
+<input type="radio" id="humanGeography1" name="humanGeography" value=1>1
+<input type="radio" id="humanGeography2" name="humanGeography" value=2>2
+<input type="radio" id="humanGeography3" name="humanGeography" value=3>3
+<input type="radio" id="humanGeography4" name="humanGeography" value=4>4
+<input type="radio" id="humanGeography5" name="humanGeography" value=5>5
+<br>
+Italian Language &amp Culture:
+<input type="radio" id="italianNA" name="italian" value=0>N/A
+<input type="radio" id="italian1" name="italian" value=1>1
+<input type="radio" id="italian2" name="italian" value=2>2
+<input type="radio" id="italian3" name="italian" value=3>3
+<input type="radio" id="italian4" name="italian" value=4>4
+<input type="radio" id="italian5" name="italian" value=5>5
+<br>
+Japanese Language &amp Culture:
+<input type="radio" id="japaneseNA" name="japanese" value=0>N/A
+<input type="radio" id="japanese1" name="japanese" value=1>1
+<input type="radio" id="japanese2" name="japanese" value=2>2
+<input type="radio" id="japanese3" name="japanese" value=3>3
+<input type="radio" id="japanese4" name="japanese" value=4>4
+<input type="radio" id="japanese5" name="japanese" value=5>5
+<br>
+<!Latin Vergil:>
+Macroeconomics:
+<input type="radio" id="macroEconNA" name="macroEcon" value=0>N/A
+<input type="radio" id="macroEcon1" name="macroEcon" value=1>1
+<input type="radio" id="macroEcon2" name="macroEcon" value=2>2
+<input type="radio" id="macroEcon3" name="macroEcon" value=3>3
+<input type="radio" id="macroEcon4" name="macroEcon" value=4>4
+<input type="radio" id="macroEcon5" name="macroEcon" value=5>5
+<br>
+Microeconomics:
+<input type="radio" id="microEconNA" name="microEcon" value=0>N/A
+<input type="radio" id="microEcon1" name="microEcon" value=1>1
+<input type="radio" id="microEcon2" name="microEcon" value=2>2
+<input type="radio" id="microEcon3" name="microEcon" value=3>3
+<input type="radio" id="microEcon4" name="microEcon" value=4>4
+<input type="radio" id="microEcon5" name="microEcon" value=5>5
+<br>
+Music: Theory:
+<input type="radio" id="musicNA" name="music" value=0>N/A
+<input type="radio" id="music1" name="music" value=1>1
+<input type="radio" id="music2" name="music" value=2>2
+<input type="radio" id="music3" name="music" value=3>3
+<input type="radio" id="music4" name="music" value=4>4
+<input type="radio" id="music5" name="music" value=5>5
+<br>
+Physics B:
+<input type="radio" id="physicsBNA" name="physicsB" value=0>N/A
+<input type="radio" id="physicsB1" name="physicsB" value=1>1
+<input type="radio" id="physicsB2" name="physicsB" value=2>2
+<input type="radio" id="physicsB3" name="physicsB" value=3>3
+<input type="radio" id="physicsB4" name="physicsB" value=4>4
+<input type="radio" id="physicsB5" name="physicsB" value=5>5
+<br>
+Physics C: Mechanics:
+<input type="radio" id="physicsCMechNA" name="physicsCMech" value=0 onclick="physicsCMechNAcheck()">N/A
+<input type="radio" id="physicsCMech1" name="physicsCMech" value=1 onclick="physicsCMech1check()">1
+<input type="radio" id="physicsCMech2" name="physicsCMech" value=2 onclick="physicsCMech2check()">2
+<input type="radio" id="physicsCMech3" name="physicsCMech" value=3 onclick="physicsCMech3check()">3
+<input type="radio" id="physicsCMech4" name="physicsCMech" value=4 onclick="physicsCMech4check()">4
+<input type="radio" id="physicsCMech5" name="physicsCMech" value=5 onclick="physicsCMech5check()">5
+<br>
+Physics C: Electricity &amp Magnetism:
+<input type="radio" id="physicsCEMNA" name="physicsCEM" value=0 onclick="physicsCEMNAcheck()">N/A
+<input type="radio" id="physicsCEM1" name="physicsCEM" value=1 onclick="physicsCEM1check()">1
+<input type="radio" id="physicsCEM2" name="physicsCEM" value=2 onclick="physicsCEM2check()">2
+<input type="radio" id="physicsCEM3" name="physicsCEM" value=3 onclick="physicsCEM3check()">3
+<input type="radio" id="physicsCEM4" name="physicsCEM" value=4 onclick="physicsCEM4check()">4
+<input type="radio" id="physicsCEM5" name="physicsCEM" value=5 onclick="physicsCEM5check()">5
+<br>
+Psychology:
+<input type="radio" id="psychNA" name="psych" value=0>N/A
+<input type="radio" id="psych1" name="psych" value=1>1
+<input type="radio" id="psych2" name="psych" value=2>2
+<input type="radio" id="psych3" name="psych" value=3>3
+<input type="radio" id="psych4" name="psych" value=4>4
+<input type="radio" id="psych5" name="psych" value=5>5
+<br>
+Spanish Language:
+<input type="radio" id="spanishLangNA" name="spanishLang" value=0>N/A
+<input type="radio" id="spanishLang1" name="spanishLang" value=1>1
+<input type="radio" id="spanishLang2" name="spanishLang" value=2>2
+<input type="radio" id="spanishLang3" name="spanishLang" value=3>3
+<input type="radio" id="spanishLang4" name="spanishLang" value=4>4
+<input type="radio" id="spanishLang5" name="spanishLang" value=5>5
+<br>
+Spanish Literature:
+<input type="radio" id="spanishLitNA" name="spanishLit" value=0>N/A
+<input type="radio" id="spanishLit1" name="spanishLit" value=1>1
+<input type="radio" id="spanishLit2" name="spanishLit" value=2>2
+<input type="radio" id="spanishLit3" name="spanishLit" value=3>3
+<input type="radio" id="spanishLit4" name="spanishLit" value=4>4
+<input type="radio" id="spanishLit5" name="spanishLit" value=5>5
+<br>
+Statistics:
+<input type="radio" id="statsNA" name="stats" value=0>N/A
+<input type="radio" id="stats1" name="stats" value=1>1
+<input type="radio" id="stats2" name="stats" value=2>2
+<input type="radio" id="stats3" name="stats" value=3>3
+<input type="radio" id="stats4" name="stats" value=4>4
+<input type="radio" id="stats5" name="stats" value=5>5
+<br>
+<!Studio Art: 2-D Design:>
+<!Studio Art: 3-D Design:>
+<!Studio Art: Drawing:>
+U.S. Government &amp Politics:
+<input type="radio" id="usGovPolNA" name="usGovPol" value=0>N/A
+<input type="radio" id="usGovPol1" name="usGovPol" value=1>1
+<input type="radio" id="usGovPol2" name="usGovPol" value=2>2
+<input type="radio" id="usGovPol3" name="usGovPol" value=3>3
+<input type="radio" id="usGovPol4" name="usGovPol" value=4>4
+<input type="radio" id="usGovPol5" name="usGovPol" value=5>5
+<br>
+U.S. History:
+<input type="radio" id="usHistoryNA" name="usHistory" value=0>N/A
+<input type="radio" id="usHistory1" name="usHistory" value=1>1
+<input type="radio" id="usHistory2" name="usHistory" value=2>2
+<input type="radio" id="usHistory3" name="usHistory" value=3>3
+<input type="radio" id="usHistory4" name="usHistory" value=4>4
+<input type="radio" id="usHistory5" name="usHistory" value=5>5
+<!World History:>
+
+<br>
+<br>
+
+<h3>Additional Academic Credit</h3>
+
+If you have taken dual credit classes through another university or have completed certain courses at local<br>
+community colleges you may have credit for correspoding Santa Clara University courses.
+
+Please click
+<a href="http://www.scu.edu/studentrecords/transferguides/" target="0">here</a><br>
+to look at Santa Clara's current transfer guidelines. If you determine that you have credit for any of the classes<br>
+below please mark them with a check:
+
+<h4>Mathematics</h4>
+
+<input type="checkbox" id="MATH11" onclick="math11check()">
+MATH 11 (Score of 4 or higher on Calculus AB exam; score of 3 or higher on Calculus BC exam gives credit)
+
+<br>
+<input type="checkbox" id="MATH12" onclick="math12check()">
+MATH 12 (Pre-requisite is MATH 11) (Score of 4 or higher on Calculus BC exam gives credit)
+
+<br>
+<input type="checkbox" id="MATH13" onclick="math13check()">
+MATH 13 (Pre-requisite is MATH 12)
+
+<br>
+<input type="checkbox" id="MATH14" onclick="math14check()">
+MATH 14 (Pre-requisite is MATH 13)
+
+<br>
+<input type="checkbox" id="AMTH106" onclick="amth106check()">
+MATH 22 (Pre-requisite is MATH 14) (MATH 22 is equivalent to AMTH 106)
+
+<br>
+<input type="checkbox" id="MATH53" onclick="math53check()">
+MATH 53 (Pre-requisite is MATH 13)
+
+<br>
+
+<h4>Engineering</h4>
+
+<input type="checkbox" id="COEN10" onclick="coen10check()">
+COEN 10 (Score of 3 or higher on Computer Science A exam gives credit)
+
+<br>
+<input type="checkbox" id="COEN11" onclick="coen11check()">
+COEN 11 (Pre-requisite is COEN 10) (Score of 4 or higher on Computer Science A exam gives credit)
+
+<br>
+<input type="checkbox" id="COEN12" onclick="coen12check()">
+COEN 12 (Pre-requisite is COEN 11)
+
+<br>
+<input type="checkbox" id="COEN19">
+COEN 19
+
+<br>
+<input type="checkbox" id="COEN20" onclick="coen20check()">
+COEN 20 (Pre-requisite is COEN 12)
+
+<br>
+<input type="checkbox" id="ELEN50" onclick="elen50check()">
+ELEN 50 (Must have completed PHYS 33 to get credit)
+
+<br>
+
+<h4>Science</h4>
+
+<input type="checkbox" id="CHEM11">
+CHEM 11 (Score of 3 or higher on Chemistry gives credit)
+
+<br>
+<input type="checkbox" id="PHYS31">
+PHYS 31 (Score of 4 or higher on Physics C: Mechanics gives credit)
+
+<br>
+<input type="checkbox" id="PHYS32">
+PHYS 32
+
+<br>
+<input type="checkbox" id="PHYS33" onclick="phys33check()">
+PHYS 33 (Score of 4 or higher on Physics C: Eletricity &amp Magnetism gives credit)
+
+
+<br>
+<br>
+
+<button type="button" id="submit" onclick="generateSchedule()">Submit</button>
+<button type="button" id="print" onclick="printSchedule()">Print</button>
+
+<p id="submitError"></p>
+
+<br>
+<br>
+
+<table border="2" style="width:55%" id="Schedule">
+	<tr>
+		<td align="center" bgcolor="#C8C8C8"><p><b>Fall Quarter</b></p></td>
+		<td align="center" bgcolor="#C8C8C8"><p><b>Winter Quarter</b></p></td>
+		<td align="center" bgcolor="#C8C8C8"><p><b>Spring Quarter</b></p></td>
+	</tr>
+	<tr>
+		<td id="cell1.1" bgcolor="white"><p id="class1Fall">Click submit to view schedule</p></td>
+		<td id="cell1.2" bgcolor="white"><p id="class1Winter">Click submit to view schedule</p></td>
+		<td id="cell1.3" bgcolor="white"><p id="class1Spring">Click submit to view schedule</p></td>
+	</tr>
+	<tr>
+		<td id="cell2.1" bgcolor="white"><p id="class2Fall">Click submit to view schedule</p></td>
+		<td id="cell2.2" bgcolor="white"><p id="class2Winter">Click submit to view schedule</p></td>
+		<td id="cell2.3" bgcolor="white"><p id="class2Spring">Click submit to view schedule</p></td>
+	</tr>
+	<tr>
+		<td id="cell3.1" bgcolor="white"><p id="class3Fall">Click submit to view schedule</p></td>
+		<td id="cell3.2" bgcolor="white"><p id="class3Winter">Click submit to view schedule</p></td>
+		<td id="cell3.3" bgcolor="white"><p id="class3Spring">Click submit to view schedule</p></td>
+	</tr>
+	<tr>
+		<td id="cell4.1" bgcolor="white"><p id="class4Fall">Click submit to view schedule</p></td>
+		<td id="cell4.2" bgcolor="white"><p id="class4Winter">Click submit to view schedule</p></td>
+		<td id="cell4.3" bgcolor="white"><p id="class4Spring">Click submit to view schedule</p></td>
+	</tr>
+	<tr>
+		<td id="cell5.1" bgcolor="white"><p id="class5Fall">Click submit to view schedule</p></td>
+		<td id="cell5.2" bgcolor="white"><p id="class5Winter">Click submit to view schedule</p></td>
+		<td id="cell5.3" bgcolor="white"><p id="class5Spring">Click submit to view schedule</p></td>
+	</tr>
+	<tr id="finalRow">
+		<td id="cell6.1" bgcolor="white"><p id="class6Fall">Click submit to view schedule</p></td>
+		<td id="cell6.2" bgcolor="white"><p id="class6Winter">Click submit to view schedule</p></td>
+		<td id="cell6.3" bgcolor="white"><p id="class6Spring">Click submit to view schedule</p></td>
+	</tr>
+</table>
+
+<script src="myScript.js"></script>
+
+</body>
+</html> 

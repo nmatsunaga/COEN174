@@ -1,46 +1,3 @@
-/*function initializeSchedule(){
-
-	document.getElementById("class1Fall").innerHTML = "MATH 11-Calculus I";
-	document.getElementById("class2Fall").innerHTML = "COEN 10-Introduction to Programming";
-	document.getElementById("class4Fall").innerHTML = "CTW 1-Critical Thinking & Writing 1";
-	document.getElementById("class5Fall").innerHTML = "ENGR 1-Introduction to Engineering";
-
-	document.getElementById("class1Winter").innerHTML = "MATH 12-Calculus II";
-	document.getElementById("class2Winter").innerHTML = "COEN 11-Advanced Programming";
-	document.getElementById("class4Winter").innerHTML = "CTW 2-Critical Thinking & Writing 2";
-	document.getElementById("class5Winter").innerHTML = "";
-
-	document.getElementById("class1Spring").innerHTML = "MATH 13-Calculus III";
-	document.getElementById("class2Spring").innerHTML = "COEN 12-Data Structures";
-	document.getElementById("class5Spring").innerHTML = "";
-
-	if(document.getElementById("majorCoen").checked){
-
-		document.getElementById("class3Fall").innerHTML = "CHEM 11-Chemistry I";
-		
-		document.getElementById("class3Winter").innerHTML = "PHYS 31-Physics I";
-
-		document.getElementById("class3Spring").innerHTML = "PHYS 32-Physics II";
-		document.getElementById("class4Spring").innerHTML = "COEN 19-Discrete Math";
-	}
-	else{
-
-		document.getElementById("class3Fall").innerHTML = "Natural Science";
-		
-		document.getElementById("class3Winter").innerHTML = "C&I 1-Cultures & Ideas 1";
-		
-		document.getElementById("class3Spring").innerHTML = "C&I 2-Cultures & Ideas 2";
-		document.getElementById("class4Spring").innerHTML = "RTC 1-Religion, Theology & Culture 1";
-		document.getElementById("class5Spring").innerHTML = "";
-	}
-}*/
-
-function show(){
-
-	document.getElementById("submit").type = "button";
-	document.getElementById("print").type = "button";
-}
-
 function coen10competencyCheck(){
 
 	var score = document.getElementById("compSciA").options[document.getElementById("compSciA").selectedIndex].value;
@@ -1296,8 +1253,21 @@ function printSchedule(){
 
 	var newWin = window.open("");
 
+	var major = document.getElementById("majorCoen");
+
+	newWin.document.write("<img src=\"DarrenAtkinson.jpg\"></img> \"Here's your schedule!\"");
+
+	if(major.checked){
+
+		newWin.document.write("<h2 align=\"center\">Computer Science & Engineering Freshman Schedule</h2>");
+	}
+	else{
+
+		newWin.document.write("<h1>Web Design & Engineering Freshman Schedule</h2>");
+	}
+
 	newWin.document.write(table.outerHTML);
-	//newWin.document.getElementById("ScheduleDA") = table;
+	newWin.document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">");
 	newWin.document.close();
 	newWin.focus();
 	newWin.print();
@@ -1507,4 +1477,9 @@ document.getElementById("PHYS33").onchange = function(){
 	phys33check();
 
 	generateSchedule();
+}
+
+document.getElementById("print").onclick = function(){
+
+	printSchedule();
 }

@@ -1,0 +1,66 @@
+.header {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+} 
+
+.left {
+	padding-top: 2.6cm; 
+	padding-left: .5cm;
+    float: left;
+    width: 625px;
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #F5F5F5;
+} 
+
+p {
+	font-weight: bold;
+}
+
+h3{
+    margin-bottom: .1cm;
+    font-size: 18px;
+	color: #93191B;
+}
+
+h4 {
+	color: #93191B;
+	margin-bottom: .1cm;
+}
+
+#submit {
+	font-size: 80%;
+}
+
+#print {
+	font-size: 70%;
+}
+
+#Schedule {
+	border-collapse: collapse;
+	table-layout: fixed;
+	position: fixed;
+	top: 110px;
+    right: 20px;
+    width: 55%;
+    border: 2px solid black;
+}
+
+td.borderCell {
+
+	border: 2px solid black;
+}
+
+table, td, th {
+	border: 1px solid #F5F5F5;
+}
+		
+td {
+	width: 33%;
+}

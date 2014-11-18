@@ -1,0 +1,15 @@
+table.one{
+	width: 100%;
+	border-collapse: collapse;
+	border: 2px solid black;
+	table-layout: fixed;
+}
+table.two{
+	border: 0px;
+	table-layout: fixed;
+}
+td{
+	border: 2px solid black;
+	width: 33%;
+	height: 50px;
+}

@@ -207,3 +207,39 @@ document.getElementById("print").onclick = function(){
 
 	printSchedule();
 }
+
+/*document.body.onload = function(){
+
+	var width = screen.width;
+
+	width = (width / 2) - 300;
+
+	document.getElementById("fixedHeader").style.marginLeft = width + "px";
+}*/
+
+document.body.onscroll = function(){
+
+	var yPosition = 0;
+	var el = document.getElementById("divCenter");
+
+	//console.log(el.offsetTop);
+	//console.log(el.scrollTop);
+	//console.log(el.clientTop);
+
+	while(el){
+
+		//console.log(yPosition);
+
+		yPosition += el.offsetTop - el.scrollTop + el.clientTop;
+		el = el.offsetParent;
+	}
+
+	yPosition = -1 * yPosition;
+
+	console.log(yPosition);
+
+	if(yPosition > 0){
+
+		document.getElementById("rightColumn").style.paddingTop = yPosition + "px";
+	}
+}

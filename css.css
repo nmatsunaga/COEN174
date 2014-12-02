@@ -8,33 +8,64 @@ body {
 
 div.header {
 
-	margin-bottom: 30px;
-	font-weight: bold;
-	font-size: 60px;
 	text-align: center;
+	font-family: "Trebuchet MS", Helvetica;
+	font-weight: normal;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	font-size: 60px;
+	/*background: url(background.jpg);
+	background-size: 100% 100%;*/
+}
+
+div.bigCenter {
+
+	z-index: 0;
+	width: 1250px;
+	margin: 0 auto;
+	height: 1900px;
 }
 
 div.left {
 
 	float: left;
-	width: 45%;
-	padding-left: 30px;
-	margin-bottom: 30px;
+	width: 600px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	padding-right: 10px;
+	/*margin-bottom: 30px;
+	margin-left: 30px;*/
+	background-color: #CCCCCC;
 }
 
 div.right {
 
 	float: right;
-	width: 45%;
+	height: 1200px;
+	width: 600px;
+	/*padding-top: 15px;
+	padding-left: 15px;
+	padding-bottom: 15px;
+	padding-right: 15px; 
 	padding-right: 30px;
 	margin-bottom: 30px;
+	margin-right: 30px;*/
+	background-color: #CCCCCC;
 }
 
 div.fixRight {
 
 	position: fixed;
-	padding-top: 20px;
-	padding-right: 30px;
+	width: 600px;
+	background-color: #CCCCCC;
+	height: 900px;
+}
+
+img.collapse {
+
+	height: 16px;
+	width: 16px;
 }
 
 #submitError {
@@ -49,10 +80,28 @@ button.sectionButton:hover {
 	cursor: default;
 }
 
+h3.collapseHeader {
+
+	display: inline-block;
+}
+
 button.sectionButton {
 
 	background: none;
 	border: none;
+	margin: 0;
+	display: inline-block;
+}
+
+h2 {
+
+	color: #93191B;
+	text-align: center;
+}
+
+#rightHeader {
+
+	display: none;
 }
 
 h3 {
@@ -67,24 +116,21 @@ h4 {
 	margin-bottom: .1cm;
 }
 
-div.formSection {
+div.formSectionShow {
 
-	padding-left: 10px;
+	padding-left: 35px;
 }
 
-#print:hover {
+div.formSectionNoShow {
 
-	border: 2px solid blue;
+	padding-left: 35px;
+	display: none;
 }
 
 #print {
 
 	width: 100%;
 	display: none;
-	height: 40px;
-	background: url(print.png);
-	background-size: 100% 100%;
-	border: none;
 }
 
 #printCell {
@@ -100,38 +146,34 @@ p.creditClassName {
 table.three {
 
 	display: none;
-	font-family: times;
+	font-family: helvetica;
 	border: 0px;
 	table-layout: fixed;
 	width: 100%;
 }
 
 #Schedule {
+
+	/*position: fixed;*/
 	display: none;
 	font-family: times;
 	font-size: 13px;
 	border-collapse: collapse;
 	table-layout: fixed;
     border: 2px solid black;
-    width: 100%;
+    width: 520px;
+    margin-left: 40px;
+    margin-top: 40px
 }
 
 #titleCourseTable {
 
 	margin-bottom: 15px;
-	text-decoration: underline;
 }
 
 #titleCell {
 
 	width: 100%;
-}
-
-#nullCourseList {
-
-	text-align: center;
-	font-size: 25px;
-	padding-top: 40px;
 }
 
 td.padTitleCell {
@@ -157,7 +199,7 @@ td.padCell {
 
 td.cellAP {
 
-	width: 40%;
+	width: 50%;
 }
 
 td.creditCell {
@@ -165,6 +207,7 @@ td.creditCell {
 	height: 50px;
 	vertical-align: top;
 	text-align: center;
+	font-size: 13px;
 }
 
 td {

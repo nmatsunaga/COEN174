@@ -12,19 +12,19 @@
 Digital Atkinson
 </div>
 
+
+<div class="bigCenter" id="divCenter">
 <div class="left">
-Note: In order for this site to work properly you must have javascript enabled on your browser.
+
+<h2 id="leftTitle">Academic Questionnaire</h2>
+
+If you wish to minimize/maximize a section simply click on the heading.
 
 <br>
 <br>
 
-If you wish to minimize/expand a section simply click on the heading
-
-<br>
-<br>
-
-<button class="sectionButton" id="majorSelection" title="Click to minimize"><h3>Major Selection</h3></button>
-<div class="formSection" id="majorSelectionSection">
+<button class="sectionButton" id="majorSelection" title="Click to minimize"><img class="collapse" id="majorSelectionImage" src="minus.png"></img></button><h3 class="collapseHeader">Major Selection</h3>
+<div class="formSectionShow" id="majorSelectionSection">
 
 	Please select the major for which you would like to create a schedule:
 
@@ -42,8 +42,8 @@ If you wish to minimize/expand a section simply click on the heading
 <br>
 <br>
 
-<button class="sectionButton" id="engineeringOne" title="Click to minimize"><h3>Engineering I</h3></button>
-<div class="formSection" id="engineeringOneSection">
+<button class="sectionButton" id="engineeringOne" title="Click to minimize"><img class="collapse" id="engineeringOneImage" src="add.png"></img></button><h3 class="collapseHeader">Engineering I</h3>
+<div class="formSectionNoShow" id="engineeringOneSection">
 
 	Unless you are confident in your choice of engineering major please check the box below to schedule Engineering I in the Fall.
 
@@ -55,8 +55,8 @@ If you wish to minimize/expand a section simply click on the heading
 <br>
 <br>
 
-<button class="sectionButton" id="studentDesignation" title="Click to minimize"><h3>Student Designation</h3></button>
-<div class="formSection" id="studentDesignationSection">
+<button class="sectionButton" id="studentDesignation" title="Click to minimize"><img class="collapse" id="studentDesignationImage" src="add.png"></img></button><h3 class="collapseHeader">Student Designation</h3>
+<div class="formSectionNoShow" id="studentDesignationSection">
 
 	Please check if either or both of the following designations applies to you:
 
@@ -74,8 +74,8 @@ If you wish to minimize/expand a section simply click on the heading
 <br>
 <br>
 
-<button class="sectionButton" id="computingCompetency" title="Click to minimize"><h3>Computing Competency Exam</h3></button>
-<div class="formSection" id="computingCompetencySection">
+<button class="sectionButton" id="computingCompetency" title="Click to minimize"><img class="collapse" id="computingCompetencyImage" src="add.png"></img></button><h3 class="collapseHeader">Computing Competency Exam</h3>
+<div class="formSectionNoShow" id="computingCompetencySection">
 
 	If you have knowledge of basic programming techniques such as declaring and initializing variables, writing conditionals, and using loops then please check the box below to skip the introductory programming class COEN 10.
 
@@ -88,8 +88,8 @@ If you wish to minimize/expand a section simply click on the heading
 <br>
 <br>
 
-<button class="sectionButton" id="calculusReadiness" title="Click to minimize"><h3>Calculus Readiness Exam</h3></button>
-<div class="formSection" id="calculusReadinessSection">
+<button class="sectionButton" id="calculusReadiness" title="Click to minimize"><img class="collapse" id="calculusReadinessImage" src="add.png"></img></button><h3 class="collapseHeader">Calculus Readiness Exam</h3>
+<div class="formSectionNoShow" id="calculusReadinessSection">
 
 	If you have taken the calculus readiness exam and do not feel comfortable starting the calculus sequence (MATH 11), check below to schedule precalculus (MATH 9) instead. If you select this option please do not enter a score for the calculus AP tests even if you have taken them:
 
@@ -102,8 +102,8 @@ If you wish to minimize/expand a section simply click on the heading
 <br>
 <br>
 
-<button class="sectionButton" id="APscores" title="click to minimize"><h3>AP Test Scores</h3></button>
-<div class="formSection" id="APscoresSection">
+<button class="sectionButton" id="APscores" title="click to minimize"><img class="collapse" id="APscoresImage" src="add.png"></img></button><h3 class="collapseHeader">AP Test Scores</h3>
+<div class="formSectionNoShow" id="APscoresSection">
 
 Please indicate the score you have received on any of the following AP tests.
 
@@ -231,8 +231,8 @@ This section contains tests that correspond to required Computer Science and Eng
 <br>
 <br>
 
-<button class="sectionButton" id="additionalCredit" title="Click to minimize"><h3>Additional Academic Credit</h3></button>
-<div class="formSection" id="additionalCreditSection">
+<button class="sectionButton" id="additionalCredit" title="Click to minimize"><img class="collapse" id="additionalCreditImage" src="add.png"></img></button><h3 class="collapseHeader">Additional Academic Credit</h3>
+<div class="formSectionNoShow" id="additionalCreditSection">
 
 If you have taken dual credit classes through another university or have completed certain courses at local community colleges you may have credit for correspoding Santa Clara University courses.
 
@@ -310,19 +310,26 @@ PHYS 32
 PHYS 33 (Score of 4 or higher on Physics C: Electricity &amp Magnetism gives credit)
 </div>
 
+<br>
+<br>
+
+Note: In order for this site to work properly you must have javascript enabled on your browser.
+
 </div>
 
 
-<div class="right">
+<div class="right" id="rightColumn">
 
-<div class="fixRight">
+<!div class="fixRight">
 <p id="submitError">Please select a major to view your schedule</p>
+
+<h2 id="rightHeader">Schedule</h2>
 
 <table class="one" id="Schedule">
 	<tr>
-		<td align="center" bgcolor="#C8C8C8" class="borderCell"><p><b>Fall Quarter</b></p></td>
-		<td align="center" bgcolor="#C8C8C8" class="borderCell"><p><b>Winter Quarter</b></p></td>
-		<td align="center" bgcolor="#C8C8C8" class="borderCell"><p><b>Spring Quarter</b></p></td>
+		<td align="center" bgcolor="#DCDCDC" class="borderCell"><p><b>Fall Quarter</b></p></td>
+		<td align="center" bgcolor="#DCDCDC" class="borderCell"><p><b>Winter Quarter</b></p></td>
+		<td align="center" bgcolor="#DCDCDC" class="borderCell"><p><b>Spring Quarter</b></p></td>
 	</tr>
 	<tr>
 		<td id="cell1.1" bgcolor="white" class="borderCell"><p id="class1Fall">Click submit to view schedule</p></td>
@@ -362,7 +369,7 @@ PHYS 33 (Score of 4 or higher on Physics C: Electricity &amp Magnetism gives cre
 <table class="three" id="misc">
 	<tr>
 		<td class="padCell"></td>
-		<td id="printCell"><button type="button" id="print"></button></td>
+		<td id="printCell"><button type="button" id="print">Print</button></td>
 		<td class="padCell"></td>
 	</tr>
 </table>
@@ -370,40 +377,36 @@ PHYS 33 (Score of 4 or higher on Physics C: Electricity &amp Magnetism gives cre
 <br>
 
 <table class="three" id="courseSummary">
-	<tr>
-		<th colspan="4"><h3 id="titleCourseTable">Classes for which you have credit</h3></th>
+	<tr id="creditRow0">
+		<th colspan="4"><h3 id="titleCourseTable">Classes for which you have credit:</h3></th>
 	</tr>
 	<tr id="creditRow1">
 		<td class="creditCell" id="creditCell1.1"><p class="creditClassName" id="creditClass1"></p></td>
-		<td class="creditCell" id="creditCell1.2"><p class="creditClassName" id="creditClass5"></p></td>
-		<td class="creditCell" id="creditCell1.3"><p class="creditClassName" id="creditClass9"></p></td>
-		<td class="creditCell" id="creditCell1.4"><p class="creditClassName" id="creditClass13"></p></td>
+		<td class="creditCell" id="creditCell1.2"><p class="creditClassName" id="creditClass2"></p></td>
+		<td class="creditCell" id="creditCell1.3"><p class="creditClassName" id="creditClass3"></p></td>
+		<td class="creditCell" id="creditCell1.4"><p class="creditClassName" id="creditClass4"></p></td>
 	</tr>
 	<tr id="creditRow2">
-		<td class="creditCell" id="creditCell2.1"><p class="creditClassName" id="creditClass2"></p></td>
+		<td class="creditCell" id="creditCell2.1"><p class="creditClassName" id="creditClass5"></p></td>
 		<td class="creditCell" id="creditCell2.2"><p class="creditClassName" id="creditClass6"></p></td>
-		<td class="creditCell" id="creditCell2.3"><p class="creditClassName" id="creditClass10"></p></td>
-		<td class="creditCell" id="creditCell2.4"><p class="creditClassName" id="creditClass14"></p></td>
+		<td class="creditCell" id="creditCell2.3"><p class="creditClassName" id="creditClass7"></p></td>
+		<td class="creditCell" id="creditCell2.4"><p class="creditClassName" id="creditClass8"></p></td>
 	</tr>
 	<tr id="creditRow3">
-		<td class="creditCell" id="creditCell3.1"><p class="creditClassName" id="creditClass3"></p></td>
-		<td class="creditCell" id="creditCell3.2"><p class="creditClassName" id="creditClass7"></p></td>
+		<td class="creditCell" id="creditCell3.1"><p class="creditClassName" id="creditClass9"></p></td>
+		<td class="creditCell" id="creditCell3.2"><p class="creditClassName" id="creditClass10"></p></td>
 		<td class="creditCell" id="creditCell3.3"><p class="creditClassName" id="creditClass11"></p></td>
-		<td class="creditCell" id="creditCell3.4"><p class="creditClassName" id="creditClass15"></p></td>
+		<td class="creditCell" id="creditCell3.4"><p class="creditClassName" id="creditClass12"></p></td>
 	</tr>
 	<tr id="creditRow4">
-		<td class="creditCell" id="creditCell4.1"><p class="creditClassName" id="creditClass4"></p></td>
-		<td class="creditCell" id="creditCell4.2"><p class="creditClassName" id="creditClass8"></p></td>
-		<td class="creditCell" id="creditCell4.3"><p class="creditClassName" id="creditClass12"></p></td>
+		<td class="creditCell" id="creditCell4.1"><p class="creditClassName" id="creditClass13"></p></td>
+		<td class="creditCell" id="creditCell4.2"><p class="creditClassName" id="creditClass14"></p></td>
+		<td class="creditCell" id="creditCell4.3"><p class="creditClassName" id="creditClass15"></p></td>
 		<td class="creditCell" id="creditCell4.4"><p class="creditClassName" id="creditClass16"></p></td>
 	</tr>
 </table>
 
-<table class="three" id="nullCourseList">
-	<tr>
-		<td>None</td>
-	</tr>
-</table>
+<!/div>
 
 </div>
 

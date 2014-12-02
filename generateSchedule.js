@@ -7,6 +7,7 @@ function generateSchedule(){
 		document.getElementById("print").style.display = "block";
 		document.getElementById("misc").style.display = "table";
 		document.getElementById("courseSummary").style.display = "table";
+		document.getElementById("rightHeader").style.display = "block"
 		document.getElementById("submitError").style.display = "none";
 		generateScheduleCOEN();
 	}
@@ -17,6 +18,7 @@ function generateSchedule(){
 		document.getElementById("print").style.display = "block";
 		document.getElementById("misc").style.display = "table";
 		document.getElementById("courseSummary").style.display = "table";
+		document.getElementById("rightHeader").style.display = "block"
 		document.getElementById("submitError").style.display = "none";
 		generateScheduleWEB();
 	}
@@ -154,21 +156,19 @@ function fillCourseCreditList(){
 
 	if(flag){
 
+		document.getElementById("creditRow0").style.display = "table-row";
 		document.getElementById("creditRow1").style.display = "table-row";
 		document.getElementById("creditRow2").style.display = "table-row";
 		document.getElementById("creditRow3").style.display = "table-row";
 		document.getElementById("creditRow4").style.display = "table-row";
-
-		document.getElementById("nullCourseList").style.display = "none";
 	}
 	else{
 
+		document.getElementById("creditRow0").style.display = "none";
 		document.getElementById("creditRow1").style.display = "none";
 		document.getElementById("creditRow2").style.display = "none";
 		document.getElementById("creditRow3").style.display = "none";
 		document.getElementById("creditRow4").style.display = "none";
-
-		document.getElementById("nullCourseList").style.display = "table";
 	}
 }
 
@@ -177,7 +177,7 @@ function generateScheduleCOEN(){
 	var i = 0;
 	var count = 0;
 
-	var colorList = ["#C8C8C8", "#3399FF", "#66FF66", "#FFFF66"];
+	var colorList = ["#DCDCDC", "#ADD8E6", "#B5E5BC", "#FAFAD2"];
 
 	var ENGR1quarter = "fall";
 
@@ -676,7 +676,7 @@ function generateScheduleWEB(){
 
 	var count = 0;
 
-	var colorList = ["#C8C8C8", "#3399FF", "#66FF66", "#FFFF66"];
+	var colorList = ["#DCDCDC", "#ADD8E6", "#B5E5BC", "#FAFAD2"];
 
 	var ENGR1quarter = "fall";
 

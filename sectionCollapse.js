@@ -1,16 +1,28 @@
+document.body.onload = function(){
+
+	document.getElementById("engineeringOneSection").style.display = "none";
+	document.getElementById("studentDesignationSection").style.display = "none";
+	document.getElementById("computingCompetencySection").style.display = "none";
+	document.getElementById("calculusReadinessSection").style.display = "none";
+	document.getElementById("APscoresSection").style.display = "none";
+	document.getElementById("additionalCreditSection").style.display = "none";
+}
+
 function majorSelectionDisplay(){
 
 	if(document.getElementById("majorSelectionSection").style.display == "none"){
 
 		document.getElementById("majorSelectionSection").style.display = "block";
-		//document.getElementById("majorSelectionText").innerHTML = "Major Selection";
+		//document.getElementById("majorSelectionText").innerHTML = "- Major Selection";
 		document.getElementById("majorSelection").title = "Click to minimize";
+		document.getElementById("majorSelectionImage").src = "minus.png";
 	}
 	else{
 
 		document.getElementById("majorSelectionSection").style.display = "none";
-		//document.getElementById("majorSelectionText").innerHTML = "Major Selection (Click to Expand)";
+		//document.getElementById("majorSelectionText").innerHTML = "+ Major Selection (Click to Expand)";
 		document.getElementById("majorSelection").title = "Click to expand";
+		document.getElementById("majorSelectionImage").src = "add.png";
 	}
 }
 
@@ -23,13 +35,17 @@ function engineeringOneDisplay(){
 
 	if(document.getElementById("engineeringOneSection").style.display == "none"){
 
+		console.log(document.getElementById("engineeringOneSection").style.display);
+
 		document.getElementById("engineeringOneSection").style.display = "block";
 		document.getElementById("engineeringOne").title = "Click to minimize";
+		document.getElementById("engineeringOneImage").src = "minus.png";
 	}
 	else{
 
 		document.getElementById("engineeringOneSection").style.display = "none";
 		document.getElementById("engineeringOne").title = "Click to expand";
+		document.getElementById("engineeringOneImage").src = "add.png";
 	}
 }
 
@@ -44,11 +60,13 @@ function studentDesignationDisplay(){
 
 		document.getElementById("studentDesignationSection").style.display = "block";
 		document.getElementById("studentDesignation").title = "Click to minimize";
+		document.getElementById("studentDesignationImage").src = "minus.png";
 	}
 	else{
 
 		document.getElementById("studentDesignationSection").style.display = "none";
 		document.getElementById("studentDesignation").title = "Click to expand";
+		document.getElementById("studentDesignationImage").src = "add.png";
 	}
 }
 
@@ -63,11 +81,13 @@ function computingCompetencyDisplay(){
 
 		document.getElementById("computingCompetencySection").style.display = "block";
 		document.getElementById("computingCompetency").title = "Click to minimize";
+		document.getElementById("computingCompetencyImage").src = "minus.png";
 	}
 	else{
 
 		document.getElementById("computingCompetencySection").style.display = "none";
 		document.getElementById("computingCompetency").title = "Click to expand";
+		document.getElementById("computingCompetencyImage").src = "add.png";
 	}
 }
 
@@ -82,11 +102,13 @@ function calculusReadinessDisplay(){
 
 		document.getElementById("calculusReadinessSection").style.display = "block";
 		document.getElementById("calculusReadiness").title = "Click to minimize";
+		document.getElementById("calculusReadinessImage").src = "minus.png";
 	}
 	else{
 
 		document.getElementById("calculusReadinessSection").style.display = "none";
 		document.getElementById("calculusReadiness").title = "Click to expand";
+		document.getElementById("calculusReadinessImage").src = "add.png";
 	}
 }
 
@@ -101,11 +123,13 @@ function APscoresDisplay(){
 
 		document.getElementById("APscoresSection").style.display = "block";
 		document.getElementById("APscores").title = "Click to minimize";
+		document.getElementById("APscoresImage").src = "minus.png";
 	}
 	else{
 
 		document.getElementById("APscoresSection").style.display = "none";
 		document.getElementById("APscores").title = "Click to expand";
+		document.getElementById("APscoresImage").src = "add.png";
 	}
 }
 
@@ -120,11 +144,13 @@ function additionalCreditDisplay(){
 
 		document.getElementById("additionalCreditSection").style.display = "block";
 		document.getElementById("additionalCredit").title = "Click to minimize";
+		document.getElementById("additionalCreditImage").src = "minus.png";
 	}
 	else{
 
 		document.getElementById("additionalCreditSection").style.display = "none";
 		document.getElementById("additionalCredit").title = "Click to expand";
+		document.getElementById("additionalCreditImage").src = "add.png";
 	}
 }
 

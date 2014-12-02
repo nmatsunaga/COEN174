@@ -1,3 +1,138 @@
+function majorSelectionDisplay(){
+
+	if(document.getElementById("majorSelectionSection").style.display == "none"){
+
+		document.getElementById("majorSelectionSection").style.display = "block";
+		//document.getElementById("majorSelectionText").innerHTML = "Major Selection";
+		document.getElementById("majorSelection").title = "Click to minimize";
+	}
+	else{
+
+		document.getElementById("majorSelectionSection").style.display = "none";
+		//document.getElementById("majorSelectionText").innerHTML = "Major Selection (Click to Expand)";
+		document.getElementById("majorSelection").title = "Click to expand";
+	}
+}
+
+document.getElementById("majorSelection").onclick = function(){
+
+	majorSelectionDisplay();
+}
+
+function engineeringOneDisplay(){
+
+	if(document.getElementById("engineeringOneSection").style.display == "none"){
+
+		document.getElementById("engineeringOneSection").style.display = "block";
+		document.getElementById("engineeringOne").title = "Click to minimize";
+	}
+	else{
+
+		document.getElementById("engineeringOneSection").style.display = "none";
+		document.getElementById("engineeringOne").title = "Click to expand";
+	}
+}
+
+document.getElementById("engineeringOne").onclick = function(){
+
+	engineeringOneDisplay();
+}
+
+function studentDesignationDisplay(){
+
+	if(document.getElementById("studentDesignationSection").style.display == "none"){
+
+		document.getElementById("studentDesignationSection").style.display = "block";
+		document.getElementById("studentDesignation").title = "Click to minimize";
+	}
+	else{
+
+		document.getElementById("studentDesignationSection").style.display = "none";
+		document.getElementById("studentDesignation").title = "Click to expand";
+	}
+}
+
+document.getElementById("studentDesignation").onclick = function(){
+
+	studentDesignationDisplay();
+}
+
+function computingCompetencyDisplay(){
+
+	if(document.getElementById("computingCompetencySection").style.display == "none"){
+
+		document.getElementById("computingCompetencySection").style.display = "block";
+		document.getElementById("computingCompetency").title = "Click to minimize";
+	}
+	else{
+
+		document.getElementById("computingCompetencySection").style.display = "none";
+		document.getElementById("computingCompetency").title = "Click to expand";
+	}
+}
+
+document.getElementById("computingCompetency").onclick = function(){
+
+	computingCompetencyDisplay();
+}
+
+function calculusReadinessDisplay(){
+
+	if(document.getElementById("calculusReadinessSection").style.display == "none"){
+
+		document.getElementById("calculusReadinessSection").style.display = "block";
+		document.getElementById("calculusReadiness").title = "Click to minimize";
+	}
+	else{
+
+		document.getElementById("calculusReadinessSection").style.display = "none";
+		document.getElementById("calculusReadiness").title = "Click to expand";
+	}
+}
+
+document.getElementById("calculusReadiness").onclick = function(){
+
+	calculusReadinessDisplay();
+}
+
+function APscoresDisplay(){
+
+	if(document.getElementById("APscoresSection").style.display == "none"){
+
+		document.getElementById("APscoresSection").style.display = "block";
+		document.getElementById("APscores").title = "Click to minimize";
+	}
+	else{
+
+		document.getElementById("APscoresSection").style.display = "none";
+		document.getElementById("APscores").title = "Click to expand";
+	}
+}
+
+document.getElementById("APscores").onclick = function(){
+
+	APscoresDisplay();
+}
+
+function additionalCreditDisplay(){
+
+	if(document.getElementById("additionalCreditSection").style.display == "none"){
+
+		document.getElementById("additionalCreditSection").style.display = "block";
+		document.getElementById("additionalCredit").title = "Click to minimize";
+	}
+	else{
+
+		document.getElementById("additionalCreditSection").style.display = "none";
+		document.getElementById("additionalCredit").title = "Click to expand";
+	}
+}
+
+document.getElementById("additionalCredit").onclick = function(){
+
+	additionalCreditDisplay();
+}
+
 function coen10competencyCheck(){
 
 	var score = document.getElementById("compSciA").options[document.getElementById("compSciA").selectedIndex].value;
@@ -12,7 +147,11 @@ function coen10competencyCheck(){
 
 		if(score < 3){
 
+			document.getElementById("COEN10").checked = false;
+
 			document.getElementById("COEN10").disabled = false;
+
+			coen10check();
 		}
 	}
 }
@@ -32,7 +171,11 @@ function calcABCheck(){
 
 		if(scoreBC <= 2){
 
+			document.getElementById("MATH11").checked = false;
+
 			document.getElementById("MATH11").disabled = false;
+
+			math11check();
 		}
 	}
 }
@@ -53,17 +196,26 @@ function calcBCCheck(){
 	else if(scoreBC == 3){
 
 		document.getElementById("MATH11").checked = true;
+		document.getElementById("MATH12").checked = false;
 
 		document.getElementById("MATH11").disabled = true;
 		document.getElementById("MATH12").disabled = false;
+
+		math12check();
 	}
 	else{
 
+		document.getElementById("MATH12").checked = false;
 		document.getElementById("MATH12").disabled = false;
+
+		math12check();
 
 		if(scoreAB < 4){
 
+			document.getElementById("MATH11").checked = false;
 			document.getElementById("MATH11").disabled = false;
+
+			math11check();
 		}
 	}
 }
@@ -83,14 +235,23 @@ function compSciACheck(){
 	else if(score == 3){
 
 		document.getElementById("COEN10").checked = true;
+		document.getElementById("COEN11").checked = false;
 
 		document.getElementById("COEN10").disabled = true;
 		document.getElementById("COEN11").disabled = false;
+
+		coen12check();
 	}
 	else{
 
+		document.getElementById("COEN10").checked = false;
+		document.getElementById("COEN11").checked = false;
+
 		document.getElementById("COEN10").disabled = false;
 		document.getElementById("COEN11").disabled = false;
+
+		coen11check();
+		coen12check();
 	}
 }
 
@@ -113,6 +274,8 @@ function chemistryCheck(){
 		}
 		else{
 
+			document.getElementById("AMTH106").checked = false;
+
 			document.getElementById("AMTH106").disabled = false;
 		}
 	}
@@ -126,9 +289,13 @@ function chemistryCheck(){
 	}
 	else{
 
+		document.getElementById("AMTH106").checked = false;
+
 		document.getElementById("AMTH106").disabled = false;
 
 		if(scoreEnviSci < 4){
+
+			document.getElementById("CHEM11").checked = false;
 
 			document.getElementById("CHEM11").disabled = false;
 		}
@@ -157,9 +324,14 @@ function enviSciCheck(){
 
 		if(scoreChemistry == 3){
 
+			document.getElementById("AMTH106").checked = false;
+
 			document.getElementById("AMTH106").disabled = false;
 		}
 		else if(scoreChemistry < 3){
+
+			document.getElementById("AMTH106").checked = false;
+			document.getElementById("CHEM11").checked = false;
 
 			document.getElementById("AMTH106").disabled = false;
 			document.getElementById("CHEM11").disabled = false;
@@ -179,6 +351,8 @@ function physicsCMechCheck(){
 	}
 	else{
 
+		document.getElementById("PHYS31").checked = false;
+
 		document.getElementById("PHYS31").disabled = false;
 	}
 }
@@ -194,6 +368,8 @@ function physicsCEMCheck(){
 		document.getElementById("PHYS33").disabled = true;
 	}
 	else{
+
+		document.getElementById("PHYS33").checked = false;
 
 		document.getElementById("PHYS33").disabled = false;
 	}
@@ -408,16 +584,22 @@ function generateSchedule(){
 	if(document.getElementById("majorCoen").checked){
 
 		document.getElementById("submitError").innerHTML = "";
+		document.getElementById("Schedule").style.display = "table";
+		document.getElementById("print").style.display = "block";
+		document.getElementById("misc").style.display = "table";
+		document.getElementById("courseSummary").style.display = "table";
+		document.getElementById("submitError").style.display = "none";
 		generateScheduleCOEN();
 	}
 	else if(document.getElementById("majorWeb").checked){
 
 		document.getElementById("submitError").innerHTML = "";
+		document.getElementById("Schedule").style.display = "table";
+		document.getElementById("print").style.display = "block";
+		document.getElementById("misc").style.display = "table";
+		document.getElementById("courseSummary").style.display = "table";
+		document.getElementById("submitError").style.display = "none";
 		generateScheduleWEB();
-	}
-	else{
-
-		document.getElementById("submitError").innerHTML = "Please select a major!";
 	}
 }
 
@@ -427,7 +609,7 @@ function generateScheduleCOEN(){
 
 	var colorList = ["#C8C8C8", "#3399FF", "#66FF66", "#FFFF66"];
 
-	var ENGR1quarter;
+	var ENGR1quarter = "fall";
 
 	var fallCore = -1;
 	var winterCore = -1;
@@ -435,6 +617,7 @@ function generateScheduleCOEN(){
 
 	var fallRigor = 0;
 	var winterRigor = 0;
+	var springRigor = 0;
 
 	var allClasses = [];
 	var allClassesRigor = [];
@@ -738,11 +921,23 @@ function generateScheduleCOEN(){
 
 			fallRigor += allClassesRigor[allClasses.indexOf(masterClassList[(3 * count)])];
 			winterRigor += allClassesRigor[allClasses.indexOf(masterClassList[((3 * count) + 1)])];
+			springRigor += allClassesRigor[allClasses.indexOf(masterClassList[((3 * count) + 2)])];
 		}
 
 		if(winterRigor < fallRigor){
 
-			ENGR1quarter = "winter";
+			if(springRigor < winterRigor){
+
+				ENGR1quarter = "spring";
+			}
+			else{
+
+				ENGR1quarter = "winter";
+			}	
+		}
+		else if(springRigor < fallRigor){
+
+			ENGR1quarter = "spring";
 		}
 		else{
 
@@ -778,7 +973,7 @@ function generateScheduleCOEN(){
 				masterClassColors[14] = colorList[0];
 			}
 		}
-		else{
+		else if(ENGR1quarter == "winter"){
 
 			if(document.getElementById("studentDesignationL").checked){
 
@@ -805,6 +1000,35 @@ function generateScheduleCOEN(){
 				masterClassColors[12] = colorList[0];
 				masterClassColors[13] = colorList[2];
 				masterClassColors[14] = colorList[0];
+			}
+		}
+		else{
+
+			if(document.getElementById("studentDesignationL").checked){
+
+				masterClassList[12] = "LEAD 1-LEAD Seminar 1";
+				masterClassList[13] = "LEAD 2-LEAD Seminar 2";
+				masterClassList[14] = "";
+				masterClassList[15] = "";
+				masterClassList[16] = "";
+				masterClassList[17] = "ENGR 1-Introduction to Engineering (with Lab)";
+
+				masterClassColors[12] = colorList[3];
+				masterClassColors[13] = colorList[3];
+				masterClassColors[14] = colorList[0];
+				masterClassColors[15] = colorList[0];
+				masterClassColors[16] = colorList[0];
+				masterClassColors[17] = colorList[2];
+			}
+			else{
+
+				masterClassList[12] = "";
+				masterClassList[13] = "";
+				masterClassList[14] = "ENGR 1-Introduction to Engineering (with Lab)";
+
+				masterClassColors[12] = colorList[0];
+				masterClassColors[13] = colorList[0];
+				masterClassColors[14] = colorList[2];
 			}
 		}
 	}
@@ -874,7 +1098,7 @@ function generateScheduleWEB(){
 
 	var colorList = ["#C8C8C8", "#3399FF", "#66FF66", "#FFFF66"];
 
-	var ENGR1quarter;
+	var ENGR1quarter = "fall";
 
 	var fallCore = -1;
 	var winterCore = -1;
@@ -882,6 +1106,7 @@ function generateScheduleWEB(){
 
 	var fallRigor = 0;
 	var winterRigor = 0;
+	var springRigor = 0;
 
 	var allClasses = [];
 	var allClassesRigor = [];
@@ -1117,11 +1342,23 @@ function generateScheduleWEB(){
 
 			fallRigor += allClassesRigor[allClasses.indexOf(masterClassList[(3 * count)])];
 			winterRigor += allClassesRigor[allClasses.indexOf(masterClassList[((3 * count) + 1)])];
+			springRigor += allClassesRigor[allClasses.indexOf(masterClassList[((3 * count) + 2)])];
 		}
 
 		if(winterRigor < fallRigor){
 
-			ENGR1quarter = "winter";
+			if(springRigor < winterRigor){
+
+				ENGR1quarter = "spring";
+			}
+			else{
+
+				ENGR1quarter = "winter";
+			}	
+		}
+		else if(springRigor < fallRigor){
+
+			ENGR1quarter = "spring";
 		}
 		else{
 
@@ -1157,7 +1394,7 @@ function generateScheduleWEB(){
 				masterClassColors[14] = colorList[0];
 			}
 		}
-		else{
+		else if(ENGR1quarter == "winter"){
 
 			if(document.getElementById("studentDesignationL").checked){
 
@@ -1184,6 +1421,35 @@ function generateScheduleWEB(){
 				masterClassColors[12] = colorList[0];
 				masterClassColors[13] = colorList[2];
 				masterClassColors[14] = colorList[0];
+			}
+		}
+		else{
+
+			if(document.getElementById("studentDesignationL").checked){
+
+				masterClassList[12] = "LEAD 1-LEAD Seminar 1";
+				masterClassList[13] = "LEAD 2-LEAD Seminar 2";
+				masterClassList[14] = "";
+				masterClassList[15] = "";
+				masterClassList[16] = "";
+				masterClassList[17] = "ENGR 1-Introduction to Engineering (with Lab)";
+
+				masterClassColors[12] = colorList[3];
+				masterClassColors[13] = colorList[3];
+				masterClassColors[14] = colorList[0];
+				masterClassColors[15] = colorList[0];
+				masterClassColors[16] = colorList[0];
+				masterClassColors[17] = colorList[2];
+			}
+			else{
+
+				masterClassList[12] = "";
+				masterClassList[13] = "";
+				masterClassList[14] = "ENGR 1-Introduction to Engineering (with Lab)";
+
+				masterClassColors[12] = colorList[0];
+				masterClassColors[13] = colorList[0];
+				masterClassColors[14] = colorList[2];
 			}
 		}
 	}

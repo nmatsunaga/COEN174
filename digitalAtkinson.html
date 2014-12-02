@@ -3,45 +3,60 @@
 <head>
 	<meta charset="utf-8">
 	<title>Digital Atkinson</title>
-	<!font color = "black">
 
 	<link rel="stylesheet" type="text/css" href="css.css">
 </head>
-<body bgcolor="white">
-<h1>Digital Atkinson</h1>
+<body>
 
-<p>Note: In order for this site to work properly you must have javascript enabled on your browser.</p>
+<div class="header">
+Digital Atkinson
+</div>
 
-<h3>Major Selection</h3>
+<div class="left">
+Note: In order for this site to work properly you must have javascript enabled on your browser.
+
+<br>
+<br>
+
+If you wish to minimize/expand a section simply click on the heading
+
+<br>
+<br>
+
+<button class="sectionButton" id="majorSelection" title="Click to minimize"><h3>Major Selection</h3></button>
+<div class="formSection" id="majorSelectionSection">
 
 	Please select the major for which you would like to create a schedule:
 
 	<br>
 
-	<input type="radio" id="majorCoen" name="major" value="coen" onclick="generateSchedule()">
+	<input type="radio" id="majorCoen" name="major">
 	Computer Science and Engineering
 
 	<br>
 
-	<input type="radio" id="majorWeb" name="major" value="web" onclick="generateSchedule()">
+	<input type="radio" id="majorWeb" name="major">
 	Web Design and Engineering
+</div>
 
 <br>
 <br>
 
-<h3>Engineering I</h3>
+<button class="sectionButton" id="engineeringOne" title="Click to minimize"><h3>Engineering I</h3></button>
+<div class="formSection" id="engineeringOneSection">
 
-	Unless you are confident in your choice of engineering major please check the box below to schedule<br>
-	Engineering I in the Fall.
+	Unless you are confident in your choice of engineering major please check the box below to schedule Engineering I in the Fall.
 
 	<br>
 	<input type="checkbox" id="ENGR1">
 	Take ENGR I in the Fall
+</div>
 
 <br>
 <br>
 
-<h3>Student Designation</h3>
+<button class="sectionButton" id="studentDesignation" title="Click to minimize"><h3>Student Designation</h3></button>
+<div class="formSection" id="studentDesignationSection">
 
 	Please check if either or both of the following designations applies to you:
 
@@ -54,47 +69,48 @@
 
 	<input type="checkbox" id="studentDesignationL" value="lead">
 	LEAD
+</div>
 
 <br>
 <br>
 
-<h3>Computing Competency Exam</h3>
+<button class="sectionButton" id="computingCompetency" title="Click to minimize"><h3>Computing Competency Exam</h3></button>
+<div class="formSection" id="computingCompetencySection">
 
-	If you have knowledge of basic programming techniques such as declaring and<br>
-	initializing variables, writing conditionals, and using loops then please<br>
-	check the box below to skip the introductory programming class COEN 10.
+	If you have knowledge of basic programming techniques such as declaring and initializing variables, writing conditionals, and using loops then please check the box below to skip the introductory programming class COEN 10.
 
 	<br>
 
 	<input type="checkbox" id="coen10competency">
 	COEN 10
+</div>
 
 <br>
 <br>
 
-<h3>Calculus Readiness Exam</h3>
+<button class="sectionButton" id="calculusReadiness" title="Click to minimize"><h3>Calculus Readiness Exam</h3></button>
+<div class="formSection" id="calculusReadinessSection">
 
-	If you have taken the calculus readiness exam and do not feel comfortable starting<br>
-	the calculus sequence (MATH 11), check below to schedule precalculus (MATH 9) instead.<br>
-	If you select this option please do not enter a score for the calculus AP tests even if you have taken them:
+	If you have taken the calculus readiness exam and do not feel comfortable starting the calculus sequence (MATH 11), check below to schedule precalculus (MATH 9) instead. If you select this option please do not enter a score for the calculus AP tests even if you have taken them:
 
 	<br>
 
-	<input type="checkbox" id="calcReadinessCheck" name="calcReadiness">
+	<input type="checkbox" id="calcReadinessCheck">
 	Schedule MATH 9 before MATH 11
+</div>
 
 <br>
 <br>
 
-<h3>AP Test Scores</h3>
+<button class="sectionButton" id="APscores" title="click to minimize"><h3>AP Test Scores</h3></button>
+<div class="formSection" id="APscoresSection">
 
 Please indicate the score you have received on any of the following AP tests.
 
 <br>
 <br>
 
-This section contains tests that correspond to required Computer Science and Engineering<br>
-and Wed Design Engineering majors.
+This section contains tests that correspond to required Computer Science and Engineering and Wed Design Engineering majors.
 
 <br>
 <br>
@@ -105,7 +121,7 @@ and Wed Design Engineering majors.
 		<td><b>Score Received</b></td>
 	</tr>
 	<tr>
-		<td>Calculus AB</td>
+		<td class="cellAP">Calculus AB</td>
 		<td>
 			<form action="">
 				<select id="calcAB">
@@ -120,7 +136,7 @@ and Wed Design Engineering majors.
 		</td>
 	</tr>
 	<tr>
-		<td>Calculus BC</td>
+		<td class="cellAP">Calculus BC</td>
 		<td>
 			<form action="">
 				<select id="calcBC">
@@ -135,7 +151,7 @@ and Wed Design Engineering majors.
 		</td>
 	</tr>
 	<tr>
-		<td>Chemistry</td>
+		<td class="cellAP">Chemistry</td>
 		<td>
 			<form action="">
 				<select id="chemistry">
@@ -150,7 +166,7 @@ and Wed Design Engineering majors.
 		</td>
 	</tr>
 	<tr>
-		<td>Computer Science A</td>
+		<td class="cellAP">Computer Science A</td>
 		<td>
 			<form action="">
 				<select id="compSciA">
@@ -165,7 +181,7 @@ and Wed Design Engineering majors.
 		</td>
 	</tr>
 	<tr>
-		<td>Environmental Science</td>
+		<td class="cellAP">Environmental Science</td>
 		<td>
 			<form action="">
 				<select id="enviSci">
@@ -180,7 +196,7 @@ and Wed Design Engineering majors.
 		</td>
 	</tr>
 	<tr>
-		<td>Physics C: Mechanics</td>
+		<td class="cellAP">Physics C: Mechanics</td>
 		<td>
 			<form action="">
 				<select id="physicsCMech">
@@ -195,7 +211,7 @@ and Wed Design Engineering majors.
 		</td>
 	</tr>
 	<tr>
-		<td>Physics C: Electricity &amp Magnetism</td>
+		<td class="cellAP">Physics C: Electricity &amp Magnetism</td>
 		<td>
 			<form action="">
 				<select id="physicsCEM">
@@ -210,18 +226,17 @@ and Wed Design Engineering majors.
 		</td>
 	</tr>
 </table>
+</div>
 
 <br>
+<br>
 
-<h3>Additional Academic Credit</h3>
+<button class="sectionButton" id="additionalCredit" title="Click to minimize"><h3>Additional Academic Credit</h3></button>
+<div class="formSection" id="additionalCreditSection">
 
-If you have taken dual credit classes through another university or have completed certain courses at local<br>
-community colleges you may have credit for correspoding Santa Clara University courses.
+If you have taken dual credit classes through another university or have completed certain courses at local community colleges you may have credit for correspoding Santa Clara University courses.
 
-Please click
-<a href="http://www.scu.edu/studentrecords/transferguides/" target="0">here</a><br>
-to look at Santa Clara's current transfer guidelines. If you determine that you have credit for any of the classes<br>
-below please mark them with a check:
+Please click <a href="http://www.scu.edu/studentrecords/transferguides/" target="0">here</a> to look at Santa Clara's current transfer guidelines. If you determine that you have credit for any of the classes below please mark them with a check:
 
 <h4>Mathematics</h4>
 
@@ -292,18 +307,16 @@ PHYS 32
 
 <br>
 <input type="checkbox" id="PHYS33">
-PHYS 33 (Score of 4 or higher on Physics C: Eletricity &amp Magnetism gives credit)
+PHYS 33 (Score of 4 or higher on Physics C: Electricity &amp Magnetism gives credit)
+</div>
+
+</div>
 
 
-<br>
-<br>
+<div class="right">
 
-<button type="button" id="print">Print</button>
-
-<p id="submitError"></p>
-
-<br>
-<br>
+<div class="fixRight">
+<p id="submitError">Please select a major to view your schedule</p>
 
 <table class="one" id="Schedule">
 	<tr>
@@ -343,7 +356,64 @@ PHYS 33 (Score of 4 or higher on Physics C: Eletricity &amp Magnetism gives cred
 	</tr>
 </table>
 
-<script src="myScript.js"></script>
+<br>
+<br>
+
+<table class="three" id="misc">
+	<tr>
+		<td class="padCell"></td>
+		<td id="printCell"><button type="button" id="print"></button></td>
+		<td class="padCell"></td>
+	</tr>
+</table>
+
+<br>
+
+<table class="three" id="courseSummary">
+	<tr>
+		<th colspan="4"><h3 id="titleCourseTable">Classes for which you have credit</h3></th>
+	</tr>
+	<tr id="creditRow1">
+		<td class="creditCell" id="creditCell1.1"><p class="creditClassName" id="creditClass1"></p></td>
+		<td class="creditCell" id="creditCell1.2"><p class="creditClassName" id="creditClass5"></p></td>
+		<td class="creditCell" id="creditCell1.3"><p class="creditClassName" id="creditClass9"></p></td>
+		<td class="creditCell" id="creditCell1.4"><p class="creditClassName" id="creditClass13"></p></td>
+	</tr>
+	<tr id="creditRow2">
+		<td class="creditCell" id="creditCell2.1"><p class="creditClassName" id="creditClass2"></p></td>
+		<td class="creditCell" id="creditCell2.2"><p class="creditClassName" id="creditClass6"></p></td>
+		<td class="creditCell" id="creditCell2.3"><p class="creditClassName" id="creditClass10"></p></td>
+		<td class="creditCell" id="creditCell2.4"><p class="creditClassName" id="creditClass14"></p></td>
+	</tr>
+	<tr id="creditRow3">
+		<td class="creditCell" id="creditCell3.1"><p class="creditClassName" id="creditClass3"></p></td>
+		<td class="creditCell" id="creditCell3.2"><p class="creditClassName" id="creditClass7"></p></td>
+		<td class="creditCell" id="creditCell3.3"><p class="creditClassName" id="creditClass11"></p></td>
+		<td class="creditCell" id="creditCell3.4"><p class="creditClassName" id="creditClass15"></p></td>
+	</tr>
+	<tr id="creditRow4">
+		<td class="creditCell" id="creditCell4.1"><p class="creditClassName" id="creditClass4"></p></td>
+		<td class="creditCell" id="creditCell4.2"><p class="creditClassName" id="creditClass8"></p></td>
+		<td class="creditCell" id="creditCell4.3"><p class="creditClassName" id="creditClass12"></p></td>
+		<td class="creditCell" id="creditCell4.4"><p class="creditClassName" id="creditClass16"></p></td>
+	</tr>
+</table>
+
+<table class="three" id="nullCourseList">
+	<tr>
+		<td>None</td>
+	</tr>
+</table>
+
+</div>
+
+</div>
+
+<script src="generateSchedule.js"></script>
+<script src="printSchedule.js"></script>
+<script src="sectionCollapse.js"></script>
+<script src="courseCheck.js"></script>
+<script src="scheduleUpdateEvents.js"></script>
 
 </body>
 </html> 

@@ -1,11 +1,30 @@
-table.one{
+table.one {
+
 	width: 100%;
 	border-collapse: collapse;
 	border: 2px solid black;
 	table-layout: fixed;
 }
-td{
+
+table.three {
+
+	font-family: helvetica;
+	border: 0px;
+	table-layout: fixed;
+	width: 100%;
+}
+
+td.borderCell {
+
 	border: 2px solid black;
 	width: 33%;
 	height: 50px;
+}
+
+td.creditCell {
+
+	height: 50px;
+	vertical-align: top;
+	text-align: center;
+	font-size: 13px;
 }

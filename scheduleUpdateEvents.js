@@ -208,38 +208,24 @@ document.getElementById("print").onclick = function(){
 	printSchedule();
 }
 
-/*document.body.onload = function(){
+function adjustRightDiv(){
 
-	var width = screen.width;
+	var el = document.getElementById("rightColumn");
+	var rect = el.getBoundingClientRect();
 
-	width = (width / 2) - 300;
+	var shift = -rect.top;
 
-	document.getElementById("fixedHeader").style.marginLeft = width + "px";
-}*/
+	if(shift > 0){
 
-document.body.onscroll = function(){
-
-	var yPosition = 0;
-	var el = document.getElementById("divCenter");
-
-	//console.log(el.offsetTop);
-	//console.log(el.scrollTop);
-	//console.log(el.clientTop);
-
-	while(el){
-
-		//console.log(yPosition);
-
-		yPosition += el.offsetTop - el.scrollTop + el.clientTop;
-		el = el.offsetParent;
+			document.getElementById("rightColumn").style.paddingTop = (shift + 20) + "px";
 	}
+	else{
 
-	yPosition = -1 * yPosition;
-
-	console.log(yPosition);
-
-	if(yPosition > 0){
-
-		document.getElementById("rightColumn").style.paddingTop = yPosition + "px";
+		document.getElementById("rightColumn").style.paddingTop = 20 + "px";
 	}
+}
+
+window.onscroll = function(){
+
+	adjustRightDiv();
 }

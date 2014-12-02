@@ -20,46 +20,30 @@ div.header {
 
 div.bigCenter {
 
-	z-index: 0;
 	width: 1250px;
 	margin: 0 auto;
-	height: 1900px;
 }
 
 div.left {
 
 	float: left;
 	width: 600px;
-	padding-top: 10px;
+	padding-top: 20px;
 	padding-left: 10px;
 	padding-bottom: 20px;
 	padding-right: 10px;
-	/*margin-bottom: 30px;
-	margin-left: 30px;*/
 	background-color: #CCCCCC;
 }
 
 div.right {
 
 	float: right;
-	height: 1200px;
 	width: 600px;
-	/*padding-top: 15px;
-	padding-left: 15px;
-	padding-bottom: 15px;
-	padding-right: 15px; 
-	padding-right: 30px;
-	margin-bottom: 30px;
-	margin-right: 30px;*/
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	padding-right: 10px;
 	background-color: #CCCCCC;
-}
-
-div.fixRight {
-
-	position: fixed;
-	width: 600px;
-	background-color: #CCCCCC;
-	height: 900px;
 }
 
 img.collapse {
@@ -96,6 +80,7 @@ button.sectionButton {
 h2 {
 
 	color: #93191B;
+	margin-top: 0px;
 	text-align: center;
 }
 
@@ -154,7 +139,6 @@ table.three {
 
 #Schedule {
 
-	/*position: fixed;*/
 	display: none;
 	font-family: times;
 	font-size: 13px;
@@ -163,7 +147,6 @@ table.three {
     border: 2px solid black;
     width: 520px;
     margin-left: 40px;
-    margin-top: 40px
 }
 
 #titleCourseTable {

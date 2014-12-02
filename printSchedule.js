@@ -1,6 +1,7 @@
 function printSchedule(){
 
-	var table = document.getElementById("Schedule");
+	var tableOne = document.getElementById("Schedule");
+	var tableTwo = document.getElementById("courseSummary");
 
 	var newWin = window.open("");
 
@@ -17,7 +18,9 @@ function printSchedule(){
 		newWin.document.write("<h1>Web Design & Engineering Freshman Schedule</h2>");
 	}
 
-	newWin.document.write(table.outerHTML);
+	newWin.document.write(tableOne.outerHTML);
+	newWin.document.write("<br><br>");
+	newWin.document.write(tableTwo.outerHTML);
 	newWin.document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">");
 	newWin.document.close();
 	newWin.focus();

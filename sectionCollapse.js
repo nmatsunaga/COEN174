@@ -1,5 +1,13 @@
 document.body.onload = function(){
 
+	var height = window.screen.availHeight;
+
+	if(height <= 800){
+
+		document.getElementById("Schedule").style.fontSize = 11 + "px";
+		document.getElementById("courseSummary").style.fontSize = 11 + "px"; 
+	}
+
 	document.getElementById("engineeringOneSection").style.display = "none";
 	document.getElementById("studentDesignationSection").style.display = "none";
 	document.getElementById("computingCompetencySection").style.display = "none";
@@ -13,14 +21,12 @@ function majorSelectionDisplay(){
 	if(document.getElementById("majorSelectionSection").style.display == "none"){
 
 		document.getElementById("majorSelectionSection").style.display = "block";
-		//document.getElementById("majorSelectionText").innerHTML = "- Major Selection";
 		document.getElementById("majorSelection").title = "Click to minimize";
 		document.getElementById("majorSelectionImage").src = "minus.png";
 	}
 	else{
 
 		document.getElementById("majorSelectionSection").style.display = "none";
-		//document.getElementById("majorSelectionText").innerHTML = "+ Major Selection (Click to Expand)";
 		document.getElementById("majorSelection").title = "Click to expand";
 		document.getElementById("majorSelectionImage").src = "add.png";
 	}
@@ -34,8 +40,6 @@ document.getElementById("majorSelection").onclick = function(){
 function engineeringOneDisplay(){
 
 	if(document.getElementById("engineeringOneSection").style.display == "none"){
-
-		console.log(document.getElementById("engineeringOneSection").style.display);
 
 		document.getElementById("engineeringOneSection").style.display = "block";
 		document.getElementById("engineeringOne").title = "Click to minimize";

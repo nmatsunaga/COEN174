@@ -14,7 +14,7 @@ Digital Atkinson
 
 
 <div class="bigCenter" id="divCenter">
-<div class="left">
+<div class="left" id="leftColumn">
 
 <h2 id="leftTitle">Academic Questionnaire</h2>
 
@@ -319,6 +319,7 @@ Note: In order for this site to work properly you must have JavaScript enabled o
 
 
 <div class="right" id="rightColumn">
+<div class="fixRight" id="fixRightColumn">
 
 <p id="submitError">Please select a major to view your schedule</p>
 
@@ -331,34 +332,34 @@ Note: In order for this site to work properly you must have JavaScript enabled o
 		<td align="center" bgcolor="#DCDCDC" class="borderCell"><p><b>Spring Quarter</b></p></td>
 	</tr>
 	<tr>
-		<td id="cell1.1" bgcolor="white" class="borderCell"><p id="class1Fall">Click submit to view schedule</p></td>
-		<td id="cell1.2" bgcolor="white" class="borderCell"><p id="class1Winter">Click submit to view schedule</p></td>
-		<td id="cell1.3" bgcolor="white" class="borderCell"><p id="class1Spring">Click submit to view schedule</p></td>
+		<td id="cell1.1" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class1Fall">Click submit to view schedule</p></td>
+		<td id="cell1.2" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class1Winter">Click submit to view schedule</p></td>
+		<td id="cell1.3" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class1Spring">Click submit to view schedule</p></td>
 	</tr>
 	<tr>
-		<td id="cell2.1" bgcolor="white" class="borderCell"><p id="class2Fall">Click submit to view schedule</p></td>
-		<td id="cell2.2" bgcolor="white" class="borderCell"><p id="class2Winter">Click submit to view schedule</p></td>
-		<td id="cell2.3" bgcolor="white" class="borderCell"><p id="class2Spring">Click submit to view schedule</p></td>
+		<td id="cell2.1" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class2Fall">Click submit to view schedule</p></td>
+		<td id="cell2.2" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class2Winter">Click submit to view schedule</p></td>
+		<td id="cell2.3" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class2Spring">Click submit to view schedule</p></td>
 	</tr>
 	<tr>
-		<td id="cell3.1" bgcolor="white" class="borderCell"><p id="class3Fall">Click submit to view schedule</p></td>
-		<td id="cell3.2" bgcolor="white" class="borderCell"><p id="class3Winter">Click submit to view schedule</p></td>
-		<td id="cell3.3" bgcolor="white" class="borderCell"><p id="class3Spring">Click submit to view schedule</p></td>
+		<td id="cell3.1" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class3Fall">Click submit to view schedule</p></td>
+		<td id="cell3.2" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class3Winter">Click submit to view schedule</p></td>
+		<td id="cell3.3" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class3Spring">Click submit to view schedule</p></td>
 	</tr>
 	<tr>
-		<td id="cell4.1" bgcolor="white" class="borderCell"><p id="class4Fall">Click submit to view schedule</p></td>
-		<td id="cell4.2" bgcolor="white" class="borderCell"><p id="class4Winter">Click submit to view schedule</p></td>
-		<td id="cell4.3" bgcolor="white" class="borderCell"><p id="class4Spring">Click submit to view schedule</p></td>
+		<td id="cell4.1" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class4Fall">Click submit to view schedule</p></td>
+		<td id="cell4.2" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class4Winter">Click submit to view schedule</p></td>
+		<td id="cell4.3" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class4Spring">Click submit to view schedule</p></td>
 	</tr>
 	<tr>
-		<td id="cell5.1" bgcolor="white" class="borderCell"><p id="class5Fall">Click submit to view schedule</p></td>
-		<td id="cell5.2" bgcolor="white" class="borderCell"><p id="class5Winter">Click submit to view schedule</p></td>
-		<td id="cell5.3" bgcolor="white" class="borderCell"><p id="class5Spring">Click submit to view schedule</p></td>
+		<td id="cell5.1" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class5Fall">Click submit to view schedule</p></td>
+		<td id="cell5.2" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class5Winter">Click submit to view schedule</p></td>
+		<td id="cell5.3" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class5Spring">Click submit to view schedule</p></td>
 	</tr>
 	<tr id="finalRow">
-		<td id="cell6.1" bgcolor="white" class="borderCell"><p id="class6Fall">Click submit to view schedule</p></td>
-		<td id="cell6.2" bgcolor="white" class="borderCell"><p id="class6Winter">Click submit to view schedule</p></td>
-		<td id="cell6.3" bgcolor="white" class="borderCell"><p id="class6Spring">Click submit to view schedule</p></td>
+		<td id="cell6.1" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class6Fall">Click submit to view schedule</p></td>
+		<td id="cell6.2" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class6Winter">Click submit to view schedule</p></td>
+		<td id="cell6.3" bgcolor="white" class="borderCell"><p class="scheduleClass" id="class6Spring">Click submit to view schedule</p></td>
 	</tr>
 </table>
 
@@ -368,6 +369,7 @@ Note: In order for this site to work properly you must have JavaScript enabled o
 	<tr id="creditRow0">
 		<th colspan="4"><h3 id="titleCourseTable">Classes for which you have credit:</h3></th>
 	</tr>
+	<div id="creditFontAdjust">
 	<tr id="creditRow1">
 		<td class="creditCell" id="creditCell1.1"><p class="creditClassName" id="creditClass1"></p></td>
 		<td class="creditCell" id="creditCell1.2"><p class="creditClassName" id="creditClass2"></p></td>
@@ -392,6 +394,7 @@ Note: In order for this site to work properly you must have JavaScript enabled o
 		<td class="creditCell" id="creditCell4.3"><p class="creditClassName" id="creditClass15"></p></td>
 		<td class="creditCell" id="creditCell4.4"><p class="creditClassName" id="creditClass16"></p></td>
 	</tr>
+	</div>
 </table>
 
 <table class="three" id="misc">
@@ -402,6 +405,7 @@ Note: In order for this site to work properly you must have JavaScript enabled o
 	</tr>
 </table>
 
+</div>
 </div>
 
 </div>

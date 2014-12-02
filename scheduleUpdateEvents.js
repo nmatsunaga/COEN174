@@ -210,18 +210,30 @@ document.getElementById("print").onclick = function(){
 
 function adjustRightDiv(){
 
-	var el = document.getElementById("rightColumn");
-	var rect = el.getBoundingClientRect();
+	var right = document.getElementById("rightColumn");
+	var left = document.getElementById("leftColumn");
+	var rectRight = right.getBoundingClientRect();
+	var rectLeft = left.getBoundingClientRect();
 
-	var shift = -rect.top;
+	var shift = -rectRight.top;
+	var h = document.body.offsetHeight;
+	var sh = document.body.scrollHeight;
 
-	if(shift > 0){
+	var max = shift + rectRight.bottom;
 
-			document.getElementById("rightColumn").style.paddingTop = (shift + 20) + "px";
+	//console.log("Right top: ", rectRight.top);
+	//console.log("Right bottom: ", rectRight.bottom);
+	//console.log("Window height: ", h);
+	//console.log("Scroll height: ", sh);
+	//console.log("Left bottom: ", rectLeft.bottom);
+
+	if(rectRight.top > 0){
+
+		document.getElementById("fixRightColumn").style.top = rectRight.top + "px";
 	}
 	else{
 
-		document.getElementById("rightColumn").style.paddingTop = 20 + "px";
+		document.getElementById("fixRightColumn").style.top = 0 + "px";
 	}
 }
 

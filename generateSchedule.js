@@ -9,6 +9,8 @@ function generateSchedule(){
 		document.getElementById("courseSummary").style.display = "table";
 		document.getElementById("rightHeader").style.display = "block"
 		document.getElementById("submitError").style.display = "none";
+		document.getElementById("fixRightColumn").style.paddingTop = 20 + "px";
+		document.getElementById("fixRightColumn").style.paddingBottom = 20 + "px";
 		generateScheduleCOEN();
 	}
 	else if(document.getElementById("majorWeb").checked){
@@ -20,6 +22,8 @@ function generateSchedule(){
 		document.getElementById("courseSummary").style.display = "table";
 		document.getElementById("rightHeader").style.display = "block"
 		document.getElementById("submitError").style.display = "none";
+		document.getElementById("fixRightColumn").style.paddingTop = 20 + "px";
+		document.getElementById("fixRightColumn").style.paddingBottom = 20 + "px";
 		generateScheduleWEB();
 	}
 }

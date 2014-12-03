@@ -207,37 +207,3 @@ document.getElementById("print").onclick = function(){
 
 	printSchedule();
 }
-
-function adjustRightDiv(){
-
-	var right = document.getElementById("rightColumn");
-	var left = document.getElementById("leftColumn");
-	var rectRight = right.getBoundingClientRect();
-	var rectLeft = left.getBoundingClientRect();
-
-	var shift = -rectRight.top;
-	var h = document.body.offsetHeight;
-	var sh = document.body.scrollHeight;
-
-	var max = shift + rectRight.bottom;
-
-	//console.log("Right top: ", rectRight.top);
-	//console.log("Right bottom: ", rectRight.bottom);
-	//console.log("Window height: ", h);
-	//console.log("Scroll height: ", sh);
-	//console.log("Left bottom: ", rectLeft.bottom);
-
-	if(rectRight.top > 0){
-
-		document.getElementById("fixRightColumn").style.top = rectRight.top + "px";
-	}
-	else{
-
-		document.getElementById("fixRightColumn").style.top = 0 + "px";
-	}
-}
-
-window.onscroll = function(){
-
-	adjustRightDiv();
-}
